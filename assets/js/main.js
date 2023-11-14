@@ -13,7 +13,7 @@ function headerShadow(){
     const navHeader = document.getElementById("header");
 
     if(document.body.scrollTop>50||document.documentElement.scrollTop>50){
-        navHeader.style.boxShadow = "0.1px 6px rgba(0,0,0,0.1)"
+        navHeader.style.boxShadow = "0 1px 6px rgba(0,0,0,0.1)"
         navHeader.style.height = "70px"
         navHeader.style.lineHeight = "70px"
     }else{
@@ -43,7 +43,7 @@ var sr = ScrollReveal({
   sr.reveal('.featured-name',{delay: 100})
   sr.reveal('.featured-text-info',{delay: 200})
   sr.reveal('.featured-text-btn',{delay: 200})
-  sr.reveal('.social_icons',{delay: 200})
+  sr.reveal('.social-icons',{delay: 200})
   sr.reveal('.featured-image',{delay: 300})
   
   /* -- PROJECT BOX -- */

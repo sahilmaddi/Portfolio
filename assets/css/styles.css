@@ -82,7 +82,7 @@ nav{
     background: var(--body-color);
     padding-inline: 9vw;
     transition: .3s;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .nav-logo{
@@ -125,6 +125,23 @@ nav{
     font-size: 28px;
     cursor: pointer;
 }
+.active-link{
+    position: relative;
+    color: var(--first-color);
+    transition: .3s;
+}
+.active-link::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: var(--first-color);
+    border-radius: 50%;
+}
+
 .wrapper{
     padding-inline: 10vw;
 }
