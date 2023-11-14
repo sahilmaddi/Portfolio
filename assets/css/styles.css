@@ -48,6 +48,8 @@ html{
     border-radius: 10px;
     cursor: pointer;
     transition: 0.4s;
+    text-decoration: none;
+    color: var(--text-color-second);
 }
 
 .btn>i{
@@ -164,13 +166,6 @@ nav{
     padding-left: 20px;
 }
 
-.featured-text-card span{
-    background: var(--third-color);
-    color: var(--color-white);
-    padding: 3px 8px;
-    font-size: 12px;
-    border-radius: 5px;
-}
 .featured-name{
     font-size: 50px;
     font-weight: 600;
@@ -311,7 +306,10 @@ h3{
     font-size: 15px;
     color: #777;
 }
-.about-btn button{
+.about-btn{
+    margin-block-start: 10px;
+}
+.about-btn a{
     position: absolute;
     right: 20px;
     bottom: 20px;
@@ -319,7 +317,7 @@ h3{
     color: var(--color-white);
     border-radius: 30px;
 }
-.about-btn button:hover{
+.about-btn a:hover{
     background: var(--first-color-hover);
 }
 
