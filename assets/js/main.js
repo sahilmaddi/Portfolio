@@ -24,7 +24,7 @@ function headerShadow(){
 }
 
 var typedText = new Typed(".typedText",{
-    strings:["developer"],
+    strings:["java developer","software engineer","reactJS developer","Full Stack Developer"],
     loop:true,
     typeSpeed:100,
     backSpeed:80,

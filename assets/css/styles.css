@@ -42,7 +42,7 @@ html{
 
 .btn{
     font-weight: 500;
-    padding: 12px 20px;
+    padding: 8px 20px;
     background: #efefef;
     border: none;
     border-radius: 10px;
@@ -50,6 +50,7 @@ html{
     transition: 0.4s;
     text-decoration: none;
     color: var(--text-color-second);
+    text-align: center;
 }
 
 .btn>i{
@@ -317,7 +318,7 @@ h3{
 }
 .about-btn a{
     position: absolute;
-    right: 20px;
+    right: 99px;
     bottom: 20px;
     background: var(--first-color);
     color: var(--color-white);
