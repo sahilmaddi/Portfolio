@@ -391,7 +391,7 @@ h3{
 }
 .project-box:hover.project-box i,
 .project-box:hover.project-box>label,
-.project-box:hover.project-box>h3{
+.project-box:hover.project-box>h3,.project-box:hover.project-box>.h3{
     color: var(--color-white);
     z-index: 2;
 }
