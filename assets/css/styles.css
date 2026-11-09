@@ -770,3 +770,8 @@ a.icon{
         margin-inline: 10px;
     }
 }
+/* Keep slide-in animations from making the page scroll sideways */
+.wrapper{
+    overflow-x: hidden;
+    overflow-x: clip;
+}
