@@ -1,3 +1,18 @@
+/* ----- CONTACT FORM: opens the visitor's email app with the message filled in ----- */
+const contactForm = document.getElementById('contact-form')
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault()
+    const name = contactForm.elements.name.value.trim()
+    const email = contactForm.elements.email.value.trim()
+    const message = contactForm.elements.message.value.trim()
+    const subject = 'Portfolio message from ' + name
+    const body = message + '\n\n' + name + '\n' + email
+    window.location.href = 'mailto:maddisahil615@gmail.com?subject=' +
+      encodeURIComponent(subject) + '&body=' + encodeURIComponent(body)
+  })
+}
+
 function myMenuFunction(){
     var menuItem = document.getElementById("myNavMenu");
     if(menuItem.className === "nav-menu"){
@@ -24,7 +39,7 @@ function headerShadow(){
 }
 
 var typedText = new Typed(".typedText",{
-    strings:["java developer","software engineer","reactJS developer","Full Stack Developer"],
+    strings:["Java Developer","Software Engineer","React.js Developer","Full Stack Developer"],
     loop:true,
     typeSpeed:100,
     backSpeed:80,
@@ -89,3 +104,6 @@ var sr = ScrollReveal({
     })
   }
   window.addEventListener('scroll', scrollActive)
+
+/* -- PROJECT CARDS -- */
+sr.reveal('.project-card', {interval: 150})
