@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --color-ink: #0b1220;
+  --color-accent: #f5a524;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-ink);
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-slate-300);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgb(245 165 36 / 0.35);
+  color: #fff;
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgb(148 163 184 / 0.22) 1.5px, transparent 1.6px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse at 20% 30%, #000 20%, transparent 70%);
+}
+
+/* Scroll reveal: content stays visible unless the observer is running */
+.reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-ready .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal-ready .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-pulse {
+    animation: none;
+  }
+}
