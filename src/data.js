@@ -90,12 +90,12 @@ export const featuredProjects = [
     title: 'IntelliMeet AI',
     tag: 'AI · Real-time video',
     description:
-      'Video conferencing app with live transcription, AI meeting summaries, link extraction and a Q&A assistant that answers questions about the meeting.',
+      'Video conferencing app with AI meeting summaries, automatic link extraction and a Q&A assistant that answers questions about the meeting transcript.',
     points: [
       'Peer-to-peer WebRTC calls for multiple participants, with signalling over WebSocket (STOMP).',
-      'Spring Boot 3 back end on PostgreSQL, plus a Python FastAPI service for the AI features.',
+      'Spring Boot 3 back end on PostgreSQL that calls the OpenAI API (GPT-4) for summaries and answers.',
     ],
-    tech: ['Java 17', 'Spring Boot', 'WebSocket', 'WebRTC', 'React', 'PostgreSQL', 'FastAPI'],
+    tech: ['Java 17', 'Spring Boot', 'WebSocket', 'WebRTC', 'React', 'PostgreSQL', 'OpenAI API'],
     links: [{ label: 'Code', href: 'https://github.com/sahilmaddi/intellimeet-ai' }],
   },
   {
