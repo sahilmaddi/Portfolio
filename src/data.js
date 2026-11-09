@@ -14,9 +14,9 @@ export const profile = {
 
 export const stats = [
   { value: '4+', label: 'years building enterprise web apps' },
-  { value: '20%', label: 'lower API response latency at HCLTech' },
-  { value: '40%', label: 'less manual migration effort at Sage IT' },
-  { value: '15+', label: 'REST APIs designed and shipped' },
+  { value: '3', label: 'companies, from IT services to enterprise teams' },
+  { value: '15', label: 'projects shown in this portfolio' },
+  { value: '5', label: 'active certifications (ServiceNow & Google Cloud)' },
 ];
 
 export const strengths = [
@@ -53,9 +53,9 @@ export const experience = [
     period: 'Mar 2025 – Present',
     location: 'Hyderabad & Vijayawada, India',
     points: [
-      'Build and maintain scalable enterprise applications in Java, improving system uptime by 15% through proactive debugging and refactoring.',
-      'Optimised backend performance, cutting API response latency by 20% for core service modules.',
-      'Delivered 10+ high-impact features ahead of deadlines with cross-functional teams in an Agile setup.',
+      'Develop and maintain scalable enterprise software in Java, improving system stability through proactive debugging and refactoring.',
+      'Optimise backend performance to improve API response times for core service modules.',
+      'Collaborate with cross-functional teams in an Agile setup to deliver features on schedule.',
     ],
     tech: ['Java', 'Spring Boot', 'Microservices', 'REST APIs', 'React', 'Docker'],
   },
@@ -65,8 +65,8 @@ export const experience = [
     period: 'Jan 2023 – Jul 2024',
     location: 'Hyderabad, India',
     points: [
-      'Engineered a version migration tool for TIBCO API Management in Java and Spring XML, reducing manual migration effort by 40%.',
-      'Designed and implemented 15+ RESTful APIs for internal accelerator tools, improving cross-platform data workflow efficiency by 25%.',
+      'Engineered a version migration tool for TIBCO API Management in Java and Spring XML to automate manual migration work.',
+      'Designed and implemented RESTful APIs for internal accelerator tools that support cross-platform data workflows.',
       'Built SHIP AI, which automates project migration between TIBCO BW6, MuleSoft and WSO2 using OpenAI-generated XML configurations.',
     ],
     tech: ['Java', 'Spring Boot', 'Spring XML', 'Hibernate', 'MySQL', 'OpenAI API'],
