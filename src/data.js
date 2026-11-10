@@ -87,6 +87,42 @@ export const experience = [
 
 export const featuredProjects = [
   {
+    title: 'QuickBite: Food Delivery Microservices',
+    tag: 'Microservices · Kafka',
+    description:
+      'Food ordering platform with customer, restaurant-owner and rider apps, built as six Spring Boot services behind an API gateway.',
+    points: [
+      'Spring Cloud Gateway validates JWTs; Eureka discovery; order and delivery services coordinate through Kafka events.',
+      'Server-side pricing, optimistic locking on orders, live order tracking in a React + Tailwind front end, Docker Compose and CI.',
+    ],
+    tech: ['Java 21', 'Spring Boot', 'Spring Cloud', 'Kafka', 'PostgreSQL', 'React', 'Tailwind CSS', 'Docker'],
+    links: [{ label: 'Code', href: 'https://github.com/sahilmaddi/quickbite-food-delivery' }],
+  },
+  {
+    title: 'BankFlow: Digital Banking',
+    tag: 'Fintech · Microservices',
+    description:
+      'Banking app with accounts, instant transfers, statements and notifications, split into a core banking service and a Kafka-driven notification service.',
+    points: [
+      'Idempotency keys so a retried transfer never pays twice; ordered row locks so parallel transfers never overdraw.',
+      'Double-entry ledger with running balances, OAuth2 resource servers (JWT), dead-letter topic, React + Tailwind front end.',
+    ],
+    tech: ['Java 21', 'Spring Boot', 'Spring Security', 'Kafka', 'PostgreSQL', 'React', 'Tailwind CSS', 'Docker'],
+    links: [{ label: 'Code', href: 'https://github.com/sahilmaddi/bankflow-digital-banking' }],
+  },
+  {
+    title: 'Askwise: Agentic RAG',
+    tag: 'AI · RAG · LLM agents',
+    description:
+      'Ask questions about your documents and get answers with a citation for every fact, from an agent that searches, grades, retries and checks its own answers.',
+    points: [
+      'Hybrid retrieval (vector + BM25 with rank fusion), Prompty prompts, pluggable LLMs: Llama via Ollama, Azure OpenAI, OpenAI, Mistral.',
+      'Tika/OCR ingestion, FAISS, Milvus or Azure AI Search; OpenTelemetry to Grafana; Docker, Kubernetes and Terraform on Azure Container Apps.',
+    ],
+    tech: ['Python', 'FastAPI', 'LangChain', 'FAISS', 'React', 'Tailwind CSS', 'Docker', 'Kubernetes', 'Terraform'],
+    links: [{ label: 'Code', href: 'https://github.com/sahilmaddi/askwise-agentic-rag' }],
+  },
+  {
     title: 'IntelliMeet AI',
     tag: 'AI · Real-time video',
     description:
@@ -97,6 +133,17 @@ export const featuredProjects = [
     ],
     tech: ['Java 17', 'Spring Boot', 'WebSocket', 'WebRTC', 'React', 'PostgreSQL', 'FastAPI'],
     links: [{ label: 'Code', href: 'https://github.com/sahilmaddi/intellimeet-ai' }],
+  },
+  {
+    title: 'HireHub: Job Portal',
+    tag: 'Full stack',
+    description: 'Job portal where candidates search and apply for jobs and recruiters post roles and move applicants through a hiring pipeline.',
+    points: [
+      'Spring Security with JWT and role-based access; dynamic job search with JPA Specifications and pagination.',
+      'Validated status workflow with an audit trail, recruiter dashboard, React + Tailwind front end, Docker Compose and CI.',
+    ],
+    tech: ['Java 21', 'Spring Boot', 'Spring Security', 'JPA', 'PostgreSQL', 'React', 'Tailwind CSS'],
+    links: [{ label: 'Code', href: 'https://github.com/sahilmaddi/hirehub-job-portal' }],
   },
   {
     title: 'Microservices E-Commerce Platform',
@@ -124,17 +171,6 @@ export const featuredProjects = [
     note: 'Company project',
   },
   {
-    title: 'VCIOUS: Hotel Management System',
-    tag: 'Full stack',
-    description: 'Hotel management web app with room booking, customer management and multi-branch support.',
-    points: [
-      'Spring Security authentication, SMS verification with Twilio and email notifications with Spring Mail.',
-      'Responsive React front end with search, carousels and Axios-based API integration.',
-    ],
-    tech: ['Java', 'Spring Boot', 'Spring Security', 'React', 'MySQL', 'Twilio'],
-    links: [{ label: 'Frontend code', href: 'https://github.com/sahilmaddi/hotel-react-component' }],
-  },
-  {
     title: 'Polling App',
     tag: 'Full stack · Live',
     description: 'Web app for creating polls and voting on them, with results that update in real time.',
@@ -148,23 +184,24 @@ export const featuredProjects = [
       { label: 'Code', href: 'https://github.com/sahilmaddi/polling' },
     ],
   },
+];
+
+export const moreProjects = [
+  {
+    title: 'VCIOUS: Hotel Management System',
+    description: 'Room booking, customer management and multi-branch support, with Twilio SMS verification and email notifications.',
+    tech: ['Spring Boot', 'Spring Security', 'React', 'MySQL', 'Twilio'],
+    links: [{ label: 'Frontend code', href: 'https://github.com/sahilmaddi/hotel-react-component' }],
+  },
   {
     title: 'SketchToCode',
-    tag: 'Prototype',
-    description: 'Upload a hand-drawn UI sketch, pick a framework and download generated starter code.',
-    points: [
-      'Spring Boot API that orchestrates a Python (Flask) code-generation service.',
-      'React, Vite and Tailwind front end; services run together with Docker Compose and PostgreSQL.',
-    ],
-    tech: ['Spring Boot', 'Python', 'Flask', 'React', 'Docker', 'PostgreSQL'],
+    description: 'Upload a hand-drawn UI sketch, pick a framework and get starter code from a Spring Boot API that orchestrates a Python service.',
+    tech: ['Spring Boot', 'Python', 'Flask', 'React', 'Docker'],
     links: [
       { label: 'Frontend code', href: 'https://github.com/sahilmaddi/sketchtocode' },
       { label: 'Backend code', href: 'https://github.com/sahilmaddi/springboot-sketchtocode' },
     ],
   },
-];
-
-export const moreProjects = [
   {
     title: 'Pokémon Trading Cards',
     description: 'Card collection app with a full CRUD Spring Boot REST API, a bulk card-generation endpoint and a React front end.',

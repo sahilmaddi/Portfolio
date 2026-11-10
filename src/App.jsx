@@ -378,7 +378,7 @@ function Projects() {
           index="03"
           eyebrow="Projects"
           title="Things I've built"
-          intro="From real-time video with AI to payment integrations and distributed systems. Most of the code is on GitHub."
+          intro="From food delivery and banking microservices to agentic RAG and real-time video with AI. Most of the code is on GitHub."
         />
         <div className="grid gap-6 md:grid-cols-2">
           {featuredProjects.map((p) => (
