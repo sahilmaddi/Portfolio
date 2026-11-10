@@ -15,7 +15,7 @@ export const profile = {
 export const stats = [
   { value: '4+', label: 'years building enterprise web apps' },
   { value: '3', label: 'companies, from IT services to enterprise teams' },
-  { value: '15', label: 'projects shown in this portfolio' },
+  { value: '9', label: 'projects shown in this portfolio' },
   { value: '5', label: 'active certifications (ServiceNow & Google Cloud)' },
 ];
 
@@ -172,12 +172,6 @@ export const moreProjects = [
     links: [{ label: 'Code', href: 'https://github.com/sahilmaddi/pokemon-trading-cards' }],
   },
   {
-    title: 'AI Greeting Generator',
-    description: 'Generates personalised greeting messages with GPT-4. Express and React in TypeScript, with PostgreSQL via Drizzle ORM.',
-    tech: ['TypeScript', 'React', 'Express', 'OpenAI'],
-    links: [{ label: 'Code', href: 'https://github.com/sahilmaddi/OpenAIGreetingGenerator' }],
-  },
-  {
     title: 'Payment Integration API',
     description: 'Spring Boot service that creates orders, handles Razorpay payment callbacks and sends email confirmations.',
     tech: ['Spring Boot', 'Razorpay', 'MySQL'],
@@ -188,45 +182,6 @@ export const moreProjects = [
     description: 'Registration, login and password reset by email, with dependent country, state and city dropdowns.',
     tech: ['Spring Boot', 'Thymeleaf', 'MySQL', 'Spring Mail'],
     links: [{ label: 'Code', href: 'https://github.com/sahilmaddi/usermgmt' }],
-  },
-  {
-    title: 'Banking Dashboard',
-    description: 'Next.js banking dashboard that links accounts with Plaid, transfers money with Dwolla and shows transaction history.',
-    tech: ['Next.js', 'TypeScript', 'Plaid', 'Appwrite'],
-    links: [{ label: 'Code', href: 'https://github.com/sahilmaddi/bankdashboards' }],
-  },
-  {
-    title: 'Run with Confidence',
-    description: 'Pick a language, add your name and get a motivational running phrase with pronunciation and translation.',
-    tech: ['React', 'Vite', 'Tailwind CSS'],
-    links: [
-      { label: 'Live', href: 'https://learn-and-run-blush.vercel.app/' },
-      { label: 'Code', href: 'https://github.com/sahilmaddi/learn-and-run' },
-    ],
-  },
-  {
-    title: 'Smart City Tourist Spots',
-    description: 'City-based tourist spot generator website. Still in development.',
-    tech: ['React', 'JavaScript'],
-    links: [
-      { label: 'Live', href: 'https://smart-city-app-fullstack.vercel.app/' },
-      { label: 'Code', href: 'https://github.com/sahilmaddi/smart-city-app-fullstack' },
-    ],
-  },
-  {
-    title: 'Web Dev Dashboards',
-    description: 'A set of sample dashboard layouts built with React.',
-    tech: ['React', 'JavaScript', 'CSS'],
-    links: [
-      { label: 'Live', href: 'https://web-dev-dashboards.vercel.app/' },
-      { label: 'Code', href: 'https://github.com/sahilmaddi/WebDevDashboards' },
-    ],
-  },
-  {
-    title: 'Higher or Lower',
-    description: 'Android number-guessing game that tells players whether to go higher or lower.',
-    tech: ['Java', 'Android'],
-    links: [{ label: 'Code', href: 'https://github.com/sahilmaddi/higherorlower' }],
   },
 ];
 
