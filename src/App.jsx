@@ -41,8 +41,15 @@ const strengthIcons = { server: LuServer, layers: LuLayers, workflow: LuWorkflow
 
 function useReveal() {
   useEffect(() => {
-    const items = document.querySelectorAll('.reveal');
     if (!('IntersectionObserver' in window)) return;
+    // Content already on screen stays put; only content below the fold animates in.
+    const items = [...document.querySelectorAll('.reveal')].filter((el) => {
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        el.classList.add('is-visible');
+        return false;
+      }
+      return true;
+    });
     document.documentElement.classList.add('reveal-ready');
     const observer = new IntersectionObserver(
       (entries) => {
@@ -166,7 +173,7 @@ function Hero() {
     <section id="home" className="relative overflow-hidden pt-28 pb-12 sm:pt-36 sm:pb-16">
       <div aria-hidden="true" className="dot-grid pointer-events-none absolute inset-0" />
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.25fr_0.75fr]">
-        <div className="reveal">
+        <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">
             <span className="size-2 animate-pulse rounded-full bg-emerald-400" />
             Open to Java Full Stack &amp; Backend roles
@@ -204,7 +211,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="reveal relative mx-auto w-full max-w-[16rem] sm:max-w-sm">
+        <div className="relative mx-auto w-full max-w-[16rem] sm:max-w-sm">
           <div aria-hidden="true" className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-accent/30 via-transparent to-sky-500/20 blur-2xl" />
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-2">
             <img
@@ -212,6 +219,8 @@ function Hero() {
               alt={`Portrait of ${profile.name}`}
               width="480"
               height="480"
+              fetchPriority="high"
+              decoding="async"
               className="aspect-square w-full rounded-[1.6rem] object-cover"
             />
           </div>
@@ -564,7 +573,7 @@ function Footer() {
     <footer className="border-t border-white/10 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 text-sm text-slate-400 sm:flex-row sm:px-8">
         <p>
-          © {new Date().getFullYear()} {profile.name}. Built with React and Tailwind CSS.
+          <span suppressHydrationWarning>© {new Date().getFullYear()}</span> {profile.name}. Built with React and Tailwind CSS.
         </p>
         <div className="flex items-center gap-5">
           <a href={profile.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-white">
